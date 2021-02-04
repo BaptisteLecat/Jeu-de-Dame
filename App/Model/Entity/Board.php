@@ -1,5 +1,8 @@
 <?php
 
+namespace App\Model\Entity;
+use JsonSerializable;
+
 class Board implements JsonSerializable
 {
     private $list_Player;
