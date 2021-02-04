@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body, html{
+    height: 100%;
+}
+
+
+.container{
+    background-color: blue;
+    display: inline-grid;
+    width: 900px;
+    height: 900px;
+    grid-template-columns: repeat(10, 90px [columns]);
+    grid-template-rows: repeat(10, 90px [row]);
+    margin: 4px;
+    justify-content: stretch;
+    
+}
+
+.box-2{
+    background-color: rgb(31, 30, 30);
+    border: 1px solid black; 
+}
+
+.box-1{
+    background-color: rgb(104, 72, 36);
+    border: 1px solid black; 
+
+}
+
+.pawn{
+
+    width: 80%;
+    height: 80%;
+    border-radius: 100%;
+    background-color: white;
+    margin: 10%;
+}
