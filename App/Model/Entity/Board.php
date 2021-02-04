@@ -10,7 +10,7 @@ class Board implements JsonSerializable
 
     public function __construct()
     {
-        $this->list_player = array();
+        $this->list_Player = array();
         $this->list_Box = array();
     }
 
