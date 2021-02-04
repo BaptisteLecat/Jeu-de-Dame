@@ -13,7 +13,7 @@ class Player implements JsonSerializable
     private $boardObject;
     private $list_Pawn;
 
-    public function __construct($name, $boardObject = null)
+    public function __construct($name, $boardObject)
     {
         $this->name = $name;
         $this->score = 0;
