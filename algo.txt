@@ -1,0 +1,13 @@
+var selected_pawn = null;
+
+au click pion:
+
+récupere l'object
+
+selected_pawn = object.id
+
+parent de l'objet -> la div case
+
+case.background
+
+
