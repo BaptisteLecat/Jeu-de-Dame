@@ -10,15 +10,17 @@ class Player implements JsonSerializable
     private $name;
     private $score;
     private $turn;
-    private $teamObject;
+    private $boardObject;
     private $list_Pawn;
 
-    public function __construct($name, $teamObject = null)
+    public function __construct($name, $boardObject = null)
     {
         $this->name = $name;
         $this->score = 0;
         $this->turn = null;
-        $this->teamObject = $teamObject;
+        $this->boardObject = $boardObject;
+
+        $this->boardObject->addPlayer();
 
         $this->list_Pawn = array();
     }
@@ -29,8 +31,8 @@ class Player implements JsonSerializable
             "name" => $this->name,
             "score" => $this->score,
             "turn" => $this->getTurn(),
-            /*"teamObject" => $this->teamObject->jsonSerialize(),
-            "list_Pawn" => $this->getListPawnSerialize()*/
+            "BoardObject" => $this->boardObject->jsonSerialize(),
+            "list_Pawn" => $this->getListPawnSerialize()
         );
     }
 
@@ -55,9 +57,9 @@ class Player implements JsonSerializable
         return $this->score;
     }
 
-    public function getTeamObject()
+    public function getBoardObject()
     {
-        return $this->teamObject;
+        return $this->boardObject;
     }
 
     public function getTurn()
