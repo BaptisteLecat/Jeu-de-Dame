@@ -1,6 +1,7 @@
-<?php 
+<?php
 
 namespace App\Model\Entity;
+
 use JsonSerializable;
 
 class Box implements JsonSerializable
@@ -8,13 +9,16 @@ class Box implements JsonSerializable
     private $id;
     private $posX;
     private $posY;
+    private $boxType;
     private $boardObject;
     private $pawnObject;
 
-    public function __construct($id, $posX, $posY, $boardObject, $pawnObject = null) {
+    public function __construct($id, $posX, $posY, $boardObject, $boxType, $pawnObject = null)
+    {
         $this->id = $id;
         $this->posX = $posX;
         $this->posY = $posY;
+        $this->boxType = $boxType;
         $this->boardObject = $boardObject;
         $this->pawnObject = $pawnObject;
 
@@ -47,11 +51,18 @@ class Box implements JsonSerializable
         return $this->posY;
     }
 
-    public function getBoardObject(){
+    public function getBoxType()
+    {
+        return $this->boxType;
+    }
+
+    public function getBoardObject()
+    {
         return $this->boardObject;
     }
 
-    public function getPawnObject(){
+    public function getPawnObject()
+    {
         return $this->pawnObject;
     }
 }
