@@ -21,12 +21,12 @@ body, html{
     
 }
 
-.box-2{
+.box-black{
     background-color: rgb(31, 30, 30);
     border: 1px solid black; 
 }
 
-.box-1{
+.box-white{
     background-color: rgb(104, 72, 36);
     border: 1px solid black; 
 
