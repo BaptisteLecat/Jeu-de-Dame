@@ -20,7 +20,7 @@ class Player implements JsonSerializable
         $this->turn = null;
         $this->boardObject = $boardObject;
 
-        $this->boardObject->addPlayer();
+        $this->boardObject->addPlayer($this);
 
         $this->list_Pawn = array();
     }
@@ -31,7 +31,7 @@ class Player implements JsonSerializable
             "name" => $this->name,
             "score" => $this->score,
             "turn" => $this->getTurn(),
-            "BoardObject" => $this->boardObject->jsonSerialize(),
+            "boardObject" => $this->boardObject->jsonSerialize(),
             "list_Pawn" => $this->getListPawnSerialize()
         );
     }
