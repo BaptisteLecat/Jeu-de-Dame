@@ -20,6 +20,7 @@ Class Pawn implements JsonSerializable{
         $this->boxObject = $boxObject;
 
         $this->playerObject->addPawn($this);
+        $this->boxObject->setPawnObject($this);
     }
 
     //------Déclaration en .json------\\
