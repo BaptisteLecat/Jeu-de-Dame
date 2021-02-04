@@ -11,3 +11,12 @@ parent de l'objet -> la div case
 case.background
 
 
+FONCTION (permet la selection d'un pion)
+
+/!\ Si un pion était déjà sélectionné il faut le déselectionné (remettre son css normal)
+
+récupération de l'id de l'object ou l'on a click (il est passé en parametre)
+
+changement du selected_pawn par l'id que l'on a récuperer
+
+Et changement de l'affichage de la case du pion sur lequel on a click (parentnode)
