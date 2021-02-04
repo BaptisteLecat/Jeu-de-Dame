@@ -1,18 +1,25 @@
 <?php
 
+namespace App\Model\Entity;
+use JsonSerializable;
+
+
 Class Pawn implements JsonSerializable{
 
     //------Déclaration variables------\\
     private $id;
-    private $isQueens;
-    private $playerobject;
-    private $boxobject;
+    private $isQueen;
+    private $playerObject;
+    private $boxObject;
 
     //------Constructor------\\
-    public function __construct( $id, $playerobject, $boxobject){
+    public function __construct($id, $playerObject, $boxObject){
         $this->id = $id;
-        $this->playerobject = $playerobject;
-        $this->boxobject = $boxobject;
+        $this->isQueen = false;
+        $this->playerObject = $playerObject;
+        $this->boxObject = $boxObject;
+
+        $this->playerObject->addPawn($this);
     }
 
     //------Déclaration en .json------\\
@@ -20,9 +27,9 @@ Class Pawn implements JsonSerializable{
     {
         return array(
             "id" => $this->id,
-            "isQueens" => $this->isqueens,
-            "playerobject" => $this->playerobject,
-            "boxobject" => $this->boxobject
+            "isQueen" => $this->isQueen,
+            "playerObject" => $this->playerObject,
+            "boxObject" => $this->boxObject
 
         );
 
@@ -38,23 +45,23 @@ Class Pawn implements JsonSerializable{
     }
 
     public function getPlayerObject(){
-        return $this->playerobject;
+        return $this->playerObject;
     }
 
     public function getBoxObject(){
-        return $this->boxobject;
+        return $this->boxObject;
     }
 
     //------setter------\\
-    public function addIsQueens($aqueen){
-        $this->isqueens = $aqueen;
+    public function setAsQueen(){
+        $this->isQueens = true;
     }
 
-    public function setPlayerObject($player){
-        $this->playerobject = $player;
+    public function setPlayerObject($playerObject){
+        $this->playerObject = $playerObject;
     }
 
-    public function setBoxObject($boxobject){
-        $this->boxobject = $boxobject;
+    public function setBoxObject($boxObject){
+        $this->boxObject = $boxObject;
     }
 }
