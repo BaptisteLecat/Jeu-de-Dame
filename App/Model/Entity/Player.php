@@ -5,11 +5,13 @@ class Player implements JsonSerializable
     private $name;
     private $score;
     private $turn;
+    private $teamObject;
 
-    public function __construct($name) {
+    public function __construct($name, $teamObject) {
         $this->name = $name;
         $this->score = 0;
         $this->turn = null;
+        $this->teamObject = $teamObject;
     }
 
     public function jsonSerialize()
@@ -17,7 +19,8 @@ class Player implements JsonSerializable
         return array(
             "name" => $this->name,
             "score" => $this->score,
-            "turn" => $this->getTurn()
+            "turn" => $this->getTurn(),
+            "teamObject" => $this->teamObject->jsonSerialize()
         );
     }
 
@@ -29,6 +32,10 @@ class Player implements JsonSerializable
     public function getScore()
     {
         return $this->score;
+    }
+
+    public function getTeamObject(){
+        return $this->teamObject;
     }
 
     public function getTurn()
@@ -54,7 +61,7 @@ class Player implements JsonSerializable
                 throw new Exception("Le type passé en paramètre n'est pas un boolean");
             }
         }else{
-            $this->turn = ($turn == true) ? false : true;
+            $this->turn = ($turn) ? false : true;
         }
     }
 }
