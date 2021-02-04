@@ -38,7 +38,7 @@ Class Pawn implements JsonSerializable{
     }
 
     public function getPlayerObject(){
-        return $this->teamobject;
+        return $this->playerobject;
     }
 
     public function getBoxObject(){
