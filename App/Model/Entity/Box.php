@@ -65,4 +65,9 @@ class Box implements JsonSerializable
     {
         return $this->pawnObject;
     }
+
+    public function setPawnObject($pawnObject)
+    {
+        $this->pawnObject;
+    }
 }
