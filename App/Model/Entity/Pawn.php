@@ -7,12 +7,14 @@ Class Pawn implements JsonSerializable{
     private $playerobject;
     private $boxobject;
 
+    //------Constructor------//
     public function __construct( $id, $playerobject, $boxobject){
         $this->id = $id;
         $this->playerobject = $playerobject;
         $this->boxobject = $boxobject;
     }
 
+    //------fonction json------//
     public function jsonSerialize()
     {
         return array(
@@ -25,6 +27,7 @@ Class Pawn implements JsonSerializable{
 
     }
 
+    //------getter------//
     public function getId(){
         return $this->id;
     }
@@ -41,15 +44,16 @@ Class Pawn implements JsonSerializable{
         return $this->boxobject;
     }
 
-    public function setIsQueens(){
-
+    //------setter------//
+    public function addIsQueens($aqueen){
+        $this->isqueens = $aqueen;
     }
 
-    public function setPlayerObject(){
-
+    public function setPlayerObject($player){
+        $this->playerobject = $player;
     }
 
-    public function setBoxObject(){
-
+    public function setBoxObject($boxobject){
+        $this->boxobject = $boxobject;
     }
 }
