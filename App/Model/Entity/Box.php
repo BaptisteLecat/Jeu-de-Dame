@@ -13,7 +13,7 @@ class Box implements JsonSerializable
     private $boardObject;
     private $pawnObject;
 
-    public function __construct($id, $posX, $posY, $boardObject, $boxType, $pawnObject = null)
+    public function __construct($id, $posX, $posY, $boxType, $boardObject, $pawnObject = null)
     {
         $this->id = $id;
         $this->posX = $posX;
