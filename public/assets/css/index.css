@@ -1,42 +1,53 @@
-*{
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
-body, html{
-    height: 100%;
+body,
+html {
+  height: 100%;
 }
 
-
-.container{
-    background-color: blue;
-    display: inline-grid;
-    width: 900px;
-    height: 900px;
-    grid-template-columns: repeat(10, 90px [columns]);
-    grid-template-rows: repeat(10, 90px [row]);
-    margin: 4px;
-    justify-content: stretch;
-    
+.container {
+  background-color: blue;
+  display: inline-grid;
+  width: 900px;
+  height: 900px;
+  grid-template-columns: repeat(10, 90px [columns]);
+  grid-template-rows: repeat(10, 90px [row]);
+  margin: 4px;
+  justify-content: stretch;
 }
 
-.box-black{
-    background-color: rgb(31, 30, 30);
-    border: 1px solid black; 
+.box-black {
+  background-color: rgb(31, 30, 30);
+  border: 1px solid black;
 }
 
-.box-white{
-    background-color: rgb(104, 72, 36);
-    border: 1px solid black; 
-
+.box-white {
+  background-color: rgb(104, 72, 36);
+  border: 1px solid black;
 }
 
-.pawn{
+.pawn {
+  width: 80%;
+  height: 80%;
+  border-radius: 100%;
+  background-color: white;
+  margin: 10%;
+}
 
-    width: 80%;
-    height: 80%;
-    border-radius: 100%;
-    background-color: white;
-    margin: 10%;
+.unselected {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.selected {
+
+  display: flex;
+  background-color: #4b7980;
+  height: 100%;
+  width: 100%;
 }
