@@ -5,7 +5,7 @@ use App\Model\Entity\Box;
 use App\Model\Entity\Pawn;
 use App\Model\Entity\Player;
 
-require("../vendor/autoload.php");
+require("../../vendor/autoload.php");
 
 $board = new Board();
 
@@ -39,4 +39,4 @@ for ($x = 0; $x < 10; $x++) {
 
 
 
-require("../view/board.php");
+require("../../view/board.php");
