@@ -31,7 +31,6 @@ Class Pawn implements JsonSerializable{
             "isQueen" => $this->isQueen,
             "playerObject" => $this->playerObject,
             "boxObject" => $this->boxObject
-
         );
 
     }

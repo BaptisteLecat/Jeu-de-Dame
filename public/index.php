@@ -1,5 +1,5 @@
 <?php 
 
-require("board.php");
+require("controllers/board.php");
 
 ?>

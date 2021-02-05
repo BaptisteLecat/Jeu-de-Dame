@@ -15,22 +15,24 @@
             <?php if ($box->getBoxType() == 1) { ?>
                 <div class='box-black' name="<?= $box->getId() ?>">
                     <div class='unselected'>
-                        <div class='pawn' id="<?= $box->getId() ?>" onclick="selectBox(this)">
-                        </div>
+                        <?php if ($box->getPawnObject() !== null) { ?>
+                            <div class='pawn' id="<?= $box->getPawnObject()->getId() ?>" onclick="selectBox(this)"></div>
+                        <?php } ?>
                     </div>
                 </div>
             <?php } else { ?>
                 <div class='box-white' name="<?= $box->getId() ?>">
                     <div class='unselected'>
-                        <div class='pawn' id="<?= $box->getId() ?>" onclick="selectBox(this)">
-                        </div>
+                        <?php if ($box->getPawnObject() !== null) { ?>
+                            <div class='pawn' id="<?= $box->getPawnObject()->getId() ?>" onclick="selectBox(this)"></div>
+                        <?php } ?>
                     </div>
                 </div>
             <?php } ?>
         <?php } ?>
     </div>
 
-    <script src="../public/js/test.js"></script>
+    <script src="../public/js/selectBox.js"></script>
 </body>
 
 </html>

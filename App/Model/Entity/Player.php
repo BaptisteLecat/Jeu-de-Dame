@@ -57,6 +57,11 @@ class Player implements JsonSerializable
         return $this->score;
     }
 
+    public function getList_Pawn()
+    {
+        return $this->list_Pawn;
+    }
+
     public function getBoardObject()
     {
         return $this->boardObject;
