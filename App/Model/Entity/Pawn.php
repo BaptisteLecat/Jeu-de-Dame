@@ -64,4 +64,31 @@ Class Pawn implements JsonSerializable{
     public function setBoxObject($boxObject){
         $this->boxObject = $boxObject;
     }
+
+    public function whereToMove()
+    {
+        $list_boxId = array();
+
+        foreach ($this->playerObject->getBoardObject()->getList_Box() as $index => $box) {
+            //Test des diagonales au dessus du pion
+            if($box->getPosY() == $this->boxObject->getPosY() + 1){
+                if($box->getPosX() == $this->boxObject->getPosX() - 1 || $box->getPosX() == $this->boxObject->getPosX() + 1){
+                    if($box->setIsPlayable()){
+                        array_push($list_boxId, $box->getId());
+                    }
+                }
+            }
+
+            //Test des diagonales au dessous du pion
+            if ($box->getPosY() == $this->boxObject->getPosY() - 1) {
+                if ($box->getPosX() == $this->boxObject->getPosX() - 1 || $box->getPosX() == $this->boxObject->getPosX() + 1) {
+                    if ($box->setIsPlayable()) {
+                        array_push($list_boxId, $box->getId());
+                    }
+                }
+            }
+        }
+
+        return $list_boxId;
+    }
 }

@@ -45,9 +45,22 @@ html {
 }
 
 .selected {
-
   display: flex;
   background-color: #4b7980;
   height: 100%;
   width: 100%;
+}
+
+.container_playableState {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.isPlayable {
+  margin: auto;
+  height: 50%;
+  width: 50%;
+  border-radius: 50%;
+  background-color: #ffffff1c;
 }

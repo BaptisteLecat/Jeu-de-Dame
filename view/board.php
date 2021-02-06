@@ -32,6 +32,7 @@
         <?php } ?>
     </div>
 
+    <script src="../public/js/showPlayableMove.js"></script>
     <script src="../public/js/selectBox.js"></script>
 </body>
 

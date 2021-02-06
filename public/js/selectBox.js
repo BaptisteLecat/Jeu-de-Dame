@@ -16,4 +16,6 @@ function selectBox(object){
         //Changement de l'état en selected
         object.parentNode.classList.add("selected");
     }
+
+    showPlayableMove();
 }

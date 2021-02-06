@@ -76,6 +76,8 @@ class Box implements JsonSerializable
     public function setIsPlayable()
     {
         $this->isPlayable = ($this->pawnObject == null) ? true : false;
+
+        return $this->isPlayable;
     }
 
     public function setPawnObject($pawnObject)

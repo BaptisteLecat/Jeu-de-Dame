@@ -69,11 +69,7 @@ class Player implements JsonSerializable
 
     public function getTurn()
     {
-        if ($this->turn === null) {
-            throw new Exception("Le turn n'a pas été set");
-        } else {
-            return $this->turn;
-        }
+        return $this->turn;
     }
 
     public function addScore()
