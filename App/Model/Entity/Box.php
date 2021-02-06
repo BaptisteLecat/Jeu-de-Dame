@@ -10,6 +10,7 @@ class Box implements JsonSerializable
     private $posX;
     private $posY;
     private $boxType;
+    private $isPlayable;
     private $boardObject;
     private $pawnObject;
 
@@ -21,6 +22,7 @@ class Box implements JsonSerializable
         $this->boxType = $boxType;
         $this->boardObject = $boardObject;
         $this->pawnObject = $pawnObject;
+        $this->isPlayable = ($this->pawnObject == null) ? true : false;
 
         $this->boardObject->addBox($this);
     }
@@ -56,6 +58,11 @@ class Box implements JsonSerializable
         return $this->boxType;
     }
 
+    public function getIsPlayable()
+    {
+        return $this->isPlayable;
+    }
+
     public function getBoardObject()
     {
         return $this->boardObject;
@@ -64,6 +71,11 @@ class Box implements JsonSerializable
     public function getPawnObject()
     {
         return $this->pawnObject;
+    }
+
+    public function setIsPlayable()
+    {
+        $this->isPlayable = ($this->pawnObject == null) ? true : false;
     }
 
     public function setPawnObject($pawnObject)
