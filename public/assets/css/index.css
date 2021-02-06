@@ -10,7 +10,6 @@ html {
 }
 
 .container {
-  background-color: blue;
   display: inline-grid;
   width: 900px;
   height: 900px;
