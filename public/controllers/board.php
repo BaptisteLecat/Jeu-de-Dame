@@ -15,8 +15,4 @@ $player2 = new Player("Baptiste", $board);
 $board->initParty();
 $_SESSION["boardObject"] = serialize($board);
 
-var_dump($board->getList_Player()[0]->getList_Pawn()[18]->whereToMove());
-var_dump($board->getList_Player()[0]->getList_Pawn()[18]->getBoxObject()->getId());
-
-
 require("../view/board.php");
